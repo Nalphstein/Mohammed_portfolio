@@ -5,8 +5,7 @@ import Hero from "@/components/Hero";
 import Recentprojects from "@/components/Recentprojects";
 import { FloatingNav } from "@/components/ui/floatingnavbar";
 import { navitems } from "@/data";
-import Image from "next/image";
-import { FaHome } from "react-icons/fa";
+
 
 export default function Home() {
  return(
