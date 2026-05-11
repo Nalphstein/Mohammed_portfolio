@@ -90,3 +90,22 @@
 
 ### Notes
 - The page should now feel more open while keeping cards only where they add clarity, like project blocks and supporting info panels.
+
+## 2026-05-11 - About Section Cleanup
+
+### Completed
+- Replaced the crowded Aceternity-style about grid with a cleaner custom layout.
+- Removed the visually noisy laptop, globe, and floating skill-pill composition from the About section.
+- Reframed the section around positioning, work style, measurable proof, frontend tools, and operational tools.
+
+### Notes
+- This pass was meant to make the section feel more original, more restrained, and less like a generic AI-assisted portfolio block.
+
+## 2026-05-11 - Resume Integration Pass
+
+### Completed
+- Rewrote the hero summary using stronger resume-based positioning.
+- Added a practical resume CTA that lets recruiters request the resume immediately by email.
+- Expanded the experience section to include Dotmac Technologies, Freelance, Hoolio Devs (Zinary), and Microbridge Technology Solutions.
+- Added more measurable results to the site, including 40% faster page loads, 20% faster feature delivery, 15% fewer production bugs, 18% conversion improvement, and 10+ critical fixes.
+- Updated the experience cards to include company, period, and supporting metrics for each role.

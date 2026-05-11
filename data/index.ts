@@ -96,35 +96,46 @@ export const projects = [
     },
   ];
   
-  export const workExperience = [
+export const workExperience = [
     {
       id: 1,
-      title: "Frontend Intern",
-      desc: "Supported the development of React interfaces, improved interaction quality, and learned how production teams structure and ship features.",
+      title: "Network Engineer",
+      company: "Dotmac Technologies",
+      period: "Apr 2024 - Present",
+      desc: "Built a virtualized monitoring environment with Docker, Linux, and Proxmox, maintained 99.9% service availability, resolved 50+ incidents monthly, and helped reduce average downtime by 30%.",
       className: "md:col-span-2",
-      thumbnail: "/exp1.svg",
+      metrics: ["99.9% availability", "50+ incidents/month", "30% less downtime"],
+      thumbnail: "/exp2.svg",
     },
     {
       id: 2,
-      title: "Frontend Developer",
-      desc: "Built responsive web applications with Angular, React, and Tailwind CSS, delivered 5+ client projects, and improved one landing page conversion rate by 18% through layout and mobile optimization.",
+      title: "Frontend Web Developer",
+      company: "Freelance",
+      period: "Nov 2023 - May 2024",
+      desc: "Built responsive web applications with Angular, React, and Tailwind CSS, delivered 5+ custom web solutions, integrated APIs and third-party services, and improved a landing page conversion rate by 18%.",
       className: "md:col-span-2",
+      metrics: ["5+ client builds", "18% conversion lift", "API integrations"],
       thumbnail: "/exp4.svg",
     },
     {
       id: 3,
-      title: "Freelance Web Projects",
-      desc: "Integrated REST APIs, payments, and third-party services, then deployed production sites on Vercel and Netlify for dependable delivery and scalability.",
+      title: "Junior Frontend Web Developer",
+      company: "Hoolio Devs (Zinary)",
+      period: "Aug 2022 - Oct 2023",
+      desc: "Reduced page load times by 40%, built reusable UI components that improved feature delivery by 20%, implemented responsive accessible interfaces, and helped reduce production bugs by 15%.",
       className: "md:col-span-2",
+      metrics: ["40% faster loads", "20% faster delivery", "15% fewer bugs"],
       thumbnail: "/exp3.svg",
     },
     {
       id: 4,
-      title: "Network Engineer",
-      desc: "At Dotmac Technologies, I help maintain 99.9% service availability, resolve 50+ network incidents monthly, and contributed to reducing average downtime by 30% through monitoring, diagnostics, and infrastructure support.",
+      title: "Intern Web Developer",
+      company: "Microbridge Technology Solutions",
+      period: "Jun 2021 - Aug 2022",
+      desc: "Built frontend applications, resolved 10+ critical issues, collaborated through Git/GitHub workflows, and supported client-facing features later adopted in production projects.",
       className: "md:col-span-2",
-      thumbnail: "/exp2.svg",
- 
+      metrics: ["10+ critical fixes", "Git/GitHub workflows", "Production-ready features"],
+      thumbnail: "/exp1.svg",
     },
   ];
 

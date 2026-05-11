@@ -35,10 +35,12 @@ const Hero = () => {
               trust, and strong execution.
             </h1>
             <p className="max-w-2xl text-base leading-8 text-white-100 md:text-lg">
-              I&apos;m Mohammed, a frontend developer with a network engineering
-              backbone. I build polished digital experiences for companies,
-              nonprofits, and service businesses while bringing an SLA-aware,
-              reliability-first mindset to every product decision.
+              Frontend Developer and Network Engineer with experience building
+              responsive web applications and supporting production
+              infrastructure for enterprise and retail environments. Proven in
+              improving performance, delivering client projects, integrating
+              APIs, and maintaining reliable systems through structured
+              monitoring and troubleshooting.
             </p>
           </div>
 
@@ -57,6 +59,12 @@ const Hero = () => {
               Start a conversation
               <IoCopyOutline className="ml-2" />
             </a>
+            <a
+              href="mailto:mohammed.webdesign@gmail.com?subject=Resume%20Request&body=Hi%20Mohammed%2C%20I%20would%20like%20to%20request%20your%20resume."
+              className="inline-flex h-12 items-center justify-center rounded-full border border-white/15 bg-transparent px-6 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:border-sky-300/50 hover:bg-white/10"
+            >
+              Request resume
+            </a>
           </div>
 
           <div className="grid gap-4 md:grid-cols-3">
@@ -73,9 +81,9 @@ const Hero = () => {
               </p>
             </div>
             <div className="metric-card">
-              <p className="text-3xl font-semibold text-white">5+</p>
+              <p className="text-3xl font-semibold text-white">40%</p>
               <p className="mt-2 text-sm leading-6 text-white-100">
-                client websites delivered across business and nonprofit use cases.
+                faster page loads achieved through frontend performance work.
               </p>
             </div>
           </div>
@@ -85,7 +93,7 @@ const Hero = () => {
           <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(14,165,233,0.08),transparent_45%)]" />
           <div className="relative space-y-6">
             <div>
-              <p className="eyebrow">What I Bring</p>
+              <p className="eyebrow">Professional Summary</p>
               <h2 className="mt-3 text-2xl font-semibold text-white">
                 Corporate reliability with a creative frontend eye.
               </h2>
@@ -93,9 +101,9 @@ const Hero = () => {
 
             <div className="space-y-3">
               {[
-                "Responsive frontend systems built with React and Tailwind CSS",
-                "Infrastructure-aware problem solving shaped by enterprise support",
-                "Calm execution, clear communication, and conversion-minded layouts",
+                "Responsive frontend systems built with React, Angular, Next.js, and Tailwind CSS",
+                "Infrastructure-aware problem solving shaped by enterprise support and SLA-driven operations",
+                "Calm execution, clear communication, performance tuning, and conversion-minded layouts",
               ].map((item) => (
                 <div
                   key={item}
@@ -112,7 +120,8 @@ const Hero = () => {
               </p>
               <p className="mt-3 text-sm leading-7 text-white-100">
                 Open to frontend roles and freelance web work where clarity,
-                trust, and execution quality matter as much as visual polish.
+                trust, performance, and execution quality matter as much as
+                visual polish.
               </p>
             </div>
           </div>
