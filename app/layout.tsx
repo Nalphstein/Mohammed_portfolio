@@ -15,8 +15,9 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Mohammed Portfolip",
-  description: "New portfolio",
+  title: "Mohammed | Frontend Developer",
+  description:
+    "Portfolio of Mohammed, a frontend developer building polished, responsive web experiences for brands, nonprofits, and growing teams.",
 };
 
 export default function RootLayout({

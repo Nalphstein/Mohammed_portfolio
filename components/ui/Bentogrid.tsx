@@ -1,180 +1,168 @@
-'use client' 
-import { cn } from "@/lib/utils"
-import { BackgroundGradientAnimation } from "./background-gradient-animation"
-import {GlobeDemo } from "./Gridglobe"
-import { useState } from "react"
-import animationData from "@/data/confetti.json";
+'use client';
+import Image from "next/image";
+import { useState } from "react";
 import Lottie from "react-lottie";
-import { IoCopyOutline } from "react-icons/io5"
-import Magicbutton from "./Magicbutton"
+import { IoCopyOutline } from "react-icons/io5";
+import animationData from "@/data/confetti.json";
+import { cn } from "@/lib/utils";
+import { BackgroundGradientAnimation } from "./background-gradient-animation";
+import { GlobeDemo } from "./Gridglobe";
+import Magicbutton from "./Magicbutton";
 
 export const BentoGrid = ({
-    className,
-    children,
+  className,
+  children,
 }: {
-    className?: string
-    children?: React.ReactNode
+  className?: string;
+  children?: React.ReactNode;
 }) => {
-    return (
-        <div
-            className={cn(
-                "grid grid-cols-1 md:grid-cols-6 lg:grid-cols-5 md:grid-row-7 gap-4 lg:gap-8 mx-auto ",
-                className
-            )}
-        >
-            {children}
-        </div>
-    )
-}
+  return (
+    <div
+      className={cn(
+        "mx-auto grid grid-cols-1 gap-4 md:grid-cols-6 lg:grid-cols-5 lg:gap-8",
+        className
+      )}
+    >
+      {children}
+    </div>
+  );
+};
 
 export const BentoGridItem = ({
-    className,
-    title,
-    description,
-    imgClassName,
-    img,
-    id,
-    titleClassName,
-    spareImg,
+  className,
+  title,
+  description,
+  imgClassName,
+  img,
+  id,
+  titleClassName,
+  spareImg,
 }: {
-    className?: string
-    title?: string | React.ReactNode
-    description?: string | React.ReactNode
-    imgClassName?: string
-    img?: string
-    id?: number
-    titleClassName?: string
-    spareImg?: string
+  className?: string;
+  title?: string | React.ReactNode;
+  description?: string | React.ReactNode;
+  imgClassName?: string;
+  img?: string;
+  id?: number;
+  titleClassName?: string;
+  spareImg?: string;
 }) => {
+  const [copied, setCopied] = useState(false);
 
-    const [copied, setCopied] = useState(false);
+  const handleCopy = () => {
+    navigator.clipboard.writeText("mohammed.webdesign@gmail.com");
+    setCopied(true);
+  };
 
-    const handleCopy = () => {
-        navigator.clipboard.writeText('mohammed.webdesign@gmail.com');
+  return (
+    <div
+      className={cn(
+        "group/bento relative row-span-1 flex flex-col justify-between overflow-hidden rounded-[1.75rem] border border-white-100/[0.08] transition duration-200 hover:border-white/20 hover:shadow-[0_24px_60px_rgba(2,6,23,0.28)] dark:shadow-none",
+        className
+      )}
+      style={{
+        background:
+          "linear-gradient(180deg, rgba(8,15,29,0.96) 0%, rgba(13,21,39,0.98) 100%)",
+      }}
+    >
+      <div className={`${id === 6 ? "flex justify-center" : ""} h-full`}>
+        <div className="absolute h-full w-full">
+          {img && (
+            <Image
+              src={img}
+              alt=""
+              fill
+              className={cn(imgClassName, "object-cover object-center")}
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+          )}
+        </div>
 
-        setCopied(true);
-    }
-    return (
+        <div className={`absolute right-0 -bottom-5 ${id === 5 ? "w-full opacity-80" : ""}`}>
+          {spareImg && (
+            <Image
+              src={spareImg}
+              alt=""
+              width={400}
+              height={400}
+              className="h-full w-full object-cover object-center"
+            />
+          )}
+        </div>
+
+        <div>{id === 6 && <BackgroundGradientAnimation />}</div>
+
         <div
-        className={cn(
-                "row-span-1 relative overflow-hidden rounded-3xl group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none justify-between flex flex-col space-y-4 border-white-100/[0.1]",
-                className
-            )}
-            style={{
-                background: "rgb(4,7,29)",
-                backgroundColor:
-                    "linear-gradient(90deg, rgba(4,7,29,1) 2%, rgba(12,14,35,1) 100%)",
-            }}
+          className={cn(
+            titleClassName,
+            "relative z-10 flex min-h-40 flex-col p-5 px-5 transition duration-200 group-hover/bento:translate-x-1 md:h-full lg:p-8"
+          )}
         >
-            <div className={`${id === 6 && "flex justify-center"} h-full`}>
-                <div className="w-full h-full absolute">
-                    {img && (
-                        <img
-                            src={img}
-                            alt={img}
-                            className={cn(
-                                imgClassName,
-                                "object-cover",
-                                "object-center"
-                            )}
-                        />
-                    )}
-                </div>
-                <div
-                    className={`absolute right-0 -bottom-5 ${
-                        id === 5 && "w-full opacity-80"
-                    }`}
-                >
-                    {spareImg && (
-                        <img
-                            src={spareImg}
-                            alt={spareImg}
-                            className={
-                                "object-cover, object-center, w-full, h-full"
-                            }
-                        />
-                    )}
-                </div>
+          <div className="z-10 text-xs font-semibold uppercase tracking-[0.28em] text-sky-300 lg:text-sm">
+            {description}
+          </div>
 
-                <div>
-                    {id === 6 && (
-                        <BackgroundGradientAnimation>
-                        </BackgroundGradientAnimation>
-                    )}
-                </div>
+          <div className="z-10 mt-4 max-w-96 text-lg font-semibold leading-snug text-neutral-100 lg:text-[1.9rem]">
+            {title}
+          </div>
 
-                <div
-                    className={cn(
-                        titleClassName,
-                        "group-hover/bento:translate-x-2 transition duration-200 relative md:h-full min-h-40 flex flex-col px-5 p-5 lg:p-10"
-                    )}
-                >
-                    <div className="font-sans font-extralight text-[c1c2d3] text-xs md:text-xs lg:text-base z-10">
-                        {description}
-                    </div>
+          {id === 2 && <GlobeDemo />}
 
-                    <div className="font-sans font-bold text-lg text-neutral-600 dark:text-neutral-200 lg:text-3xl max-w-96 z-10">
-                        {title}
-                    </div>
-                
-
-                {id === 2 && <GlobeDemo/> }
-
-
-                {id === 3 && (
-
-                    <div className="flex gap-1 lg:gap-5 w-fit absolute -right-3 lg:-right-2">
-
-                        <div className="flex flex-col gap-3 lg:gap-8 ">
-                            {['React.js','Angular.js','Next.js','TypeScript'].map
-                            ((item) =>(
-                                <span key={item} className="py-2 lg:py-4 lg:px-3 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132E]">
-                                    {item}
-                                </span> 
-                            ) )}
-                            <span className="py-4 px-3 rounded-lg text-center bg-[#10132e] "/>
-                        </div>
-                        <div className="flex flex-col gap-3 lg:gap-8 ">
-                            <span className="py-4 px-3 rounded-lg text-center bg-[#10132e] "/>
-                            {['Unreal','Mysql','HTML','CSS'].map
-                            ((item) =>(
-                                
-                                <span key={item} className="py-2 lg:py-4 lg:px-3 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132E]">
-                                    {item}
-                                </span> 
-                            ) )}
-                        </div>
-
-                    </div>
-                ) }
-
-                {id === 6 && (
-                    <div className="mt-5 relative">
-                        <div className={`absolute -bottom-5 right-0`}>
-                            <Lottie options={{
-                                loop: copied,
-                                autoplay: copied,
-                                animationData,
-                                rendererSettings: {
-                                    preserveAspectRatio: 'xMidYMid slice',
-                                }
-                            }}/>
-
-                        </div>
-
-                        <Magicbutton
-                        title={copied ? 'Email copied' : 'Copy my email'}
-                        icon={<IoCopyOutline/>}
-                        position='left'
-                        otherClasses="!bg-[#161a31]"
-                        handleClick= {handleCopy}/>
-                    </div>
+          {id === 3 && (
+            <div className="absolute -right-3 flex w-fit gap-1 lg:-right-2 lg:gap-5">
+              <div className="flex flex-col gap-3 lg:gap-8">
+                {["React.js", "Angular.js", "Next.js", "TypeScript"].map(
+                  (item) => (
+                    <span
+                      key={item}
+                      className="rounded-xl border border-white/10 bg-[#101a33] px-3 py-2 text-center text-xs text-white-100 lg:px-3 lg:py-4 lg:text-base"
+                    >
+                      {item}
+                    </span>
+                  )
                 )}
-
-
+                <span className="rounded-xl bg-[#10132e] px-3 py-4 text-center" />
+              </div>
+              <div className="flex flex-col gap-3 lg:gap-8">
+                <span className="rounded-xl bg-[#10132e] px-3 py-4 text-center" />
+                {["Figma", "MySQL", "HTML", "CSS"].map((item) => (
+                  <span
+                    key={item}
+                    className="rounded-xl border border-white/10 bg-[#101a33] px-3 py-2 text-center text-xs text-white-100 lg:px-3 lg:py-4 lg:text-base"
+                  >
+                    {item}
+                  </span>
+                ))}
+              </div>
             </div>
-       
+          )}
+
+          {id === 6 && (
+            <div className="relative mt-5">
+              <div className="absolute -bottom-5 right-0">
+                <Lottie
+                  options={{
+                    loop: copied,
+                    autoplay: copied,
+                    animationData,
+                    rendererSettings: {
+                      preserveAspectRatio: "xMidYMid slice",
+                    },
+                  }}
+                />
+              </div>
+
+              <Magicbutton
+                title={copied ? "Email copied" : "Copy my email"}
+                icon={<IoCopyOutline />}
+                position="left"
+                otherClasses="!bg-[#161a31]"
+                handleClick={handleCopy}
+              />
+            </div>
+          )}
         </div>
-        </div>
-    );
+      </div>
+    </div>
+  );
 };

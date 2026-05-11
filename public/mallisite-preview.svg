@@ -1,0 +1,57 @@
+<svg width="1200" height="720" viewBox="0 0 1200 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="720" rx="28" fill="#0F172A"/>
+  <rect x="0" y="0" width="1200" height="82" fill="#111827"/>
+  <text x="40" y="28" fill="#94A3B8" font-family="Arial, sans-serif" font-size="14" letter-spacing="4">JABI, ABUJA FCT   MON - SAT, 8:00 AM - 6:00 PM</text>
+  <text x="1050" y="28" fill="#94A3B8" font-family="Arial, sans-serif" font-size="14" letter-spacing="4">DASHBOARD</text>
+
+  <circle cx="64" cy="140" r="28" fill="#312E81" stroke="#F97316" stroke-width="2"/>
+  <text x="100" y="136" fill="#F8FAFC" font-family="Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="3">MALIYUAUTOENGR</text>
+  <text x="100" y="162" fill="#94A3B8" font-family="Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="3">M. ALIYU AUTO ENGINEERING LIMITED</text>
+
+  <rect x="595" y="112" width="86" height="44" rx="22" stroke="#334155" fill="#1E293B"/>
+  <rect x="690" y="112" width="94" height="44" rx="22" stroke="#334155" fill="#1E293B"/>
+  <rect x="792" y="112" width="156" height="44" rx="22" stroke="#334155" fill="#1E293B"/>
+  <rect x="956" y="112" width="118" height="44" rx="22" stroke="#334155" fill="#1E293B"/>
+  <text x="621" y="140" fill="#F8FAFC" font-family="Arial, sans-serif" font-size="14" font-weight="700">About</text>
+  <text x="720" y="140" fill="#F8FAFC" font-family="Arial, sans-serif" font-size="14" font-weight="700">Services</text>
+  <text x="813" y="140" fill="#F8FAFC" font-family="Arial, sans-serif" font-size="14" font-weight="700">Book an Appointment</text>
+  <text x="987" y="140" fill="#F8FAFC" font-family="Arial, sans-serif" font-size="14" font-weight="700">Status Check</text>
+
+  <rect x="0" y="188" width="1200" height="532" fill="#172338"/>
+
+  <rect x="56" y="250" width="152" height="40" rx="20" fill="#113555" stroke="#0EA5E9"/>
+  <text x="78" y="276" fill="#E2E8F0" font-family="Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="3">JABI, ABUJA FCT</text>
+
+  <rect x="56" y="306" width="392" height="40" rx="20" fill="#233047" stroke="#334155"/>
+  <text x="78" y="332" fill="#E2E8F0" font-family="Arial, sans-serif" font-size="14" letter-spacing="4">REPAIRS, DIAGNOSIS, PAINTING, AND TRACKING</text>
+
+  <text x="56" y="392" fill="#60A5FA" font-family="Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="4">M. ALIYU AUTO ENGINEERING LIMITED</text>
+  <text x="56" y="470" fill="#F8FAFC" font-family="Arial, sans-serif" font-size="68" font-weight="700">Abuja's trusted</text>
+  <text x="56" y="548" fill="#F8FAFC" font-family="Arial, sans-serif" font-size="68" font-weight="700">auto repair</text>
+  <text x="56" y="626" fill="#F8FAFC" font-family="Arial, sans-serif" font-size="68" font-weight="700">specialists.</text>
+
+  <text x="56" y="680" fill="#CBD5E1" font-family="Arial, sans-serif" font-size="20">Repairs, diagnosis, bodywork support, and dependable workshop communication.</text>
+
+  <rect x="572" y="250" width="452" height="484" rx="28" fill="#24324A" stroke="#334155"/>
+  <text x="604" y="290" fill="#93C5FD" font-family="Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="4">WORKSHOP CONTACT</text>
+  <text x="604" y="352" fill="#F8FAFC" font-family="Arial, sans-serif" font-size="36" font-weight="700">Speak to the</text>
+  <text x="604" y="398" fill="#F8FAFC" font-family="Arial, sans-serif" font-size="36" font-weight="700">workshop directly.</text>
+
+  <rect x="858" y="312" width="110" height="50" rx="25" fill="#164E63" stroke="#10B981"/>
+  <text x="882" y="332" fill="#A7F3D0" font-family="Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="3">AVAILABLE</text>
+  <text x="893" y="350" fill="#A7F3D0" font-family="Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="3">NOW</text>
+
+  <rect x="604" y="426" width="360" height="80" rx="24" fill="#1E293B" stroke="#334155"/>
+  <text x="624" y="456" fill="#93C5FD" font-family="Arial, sans-serif" font-size="12" letter-spacing="4">PHONE</text>
+  <text x="624" y="486" fill="#F8FAFC" font-family="Arial, sans-serif" font-size="24" font-weight="700">+2348037053479</text>
+
+  <rect x="604" y="528" width="360" height="92" rx="24" fill="#1E293B" stroke="#334155"/>
+  <text x="624" y="558" fill="#93C5FD" font-family="Arial, sans-serif" font-size="12" letter-spacing="4">WHAT CUSTOMERS CAN DO</text>
+  <text x="624" y="594" fill="#F8FAFC" font-family="Arial, sans-serif" font-size="18">Book inspections, request support, and check</text>
+  <text x="624" y="622" fill="#F8FAFC" font-family="Arial, sans-serif" font-size="18">repair progress without entering the dashboard.</text>
+
+  <rect x="604" y="642" width="170" height="50" rx="25" fill="#334155" stroke="#475569"/>
+  <rect x="786" y="642" width="162" height="50" rx="25" fill="#334155" stroke="#475569"/>
+  <text x="632" y="673" fill="#F8FAFC" font-family="Arial, sans-serif" font-size="14" font-weight="700">Book inspection</text>
+  <text x="816" y="673" fill="#F8FAFC" font-family="Arial, sans-serif" font-size="14" font-weight="700">Check repair status</text>
+</svg>

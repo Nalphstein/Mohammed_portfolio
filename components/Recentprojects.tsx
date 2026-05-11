@@ -1,64 +1,98 @@
-import React from 'react'
-import { projects } from '@/data'
-import { PinContainer } from "./ui/Pincontainer";
-
-import { FaLocationArrow } from 'react-icons/fa';
-
-
+import React from "react";
+import Image from "next/image";
+import { FaLocationArrow } from "react-icons/fa";
+import { projects } from "@/data";
 
 const Recentprojects = () => {
   return (
-    <div className='py-20' id="projects">
-        <h1 className='heading'>
-            A small selection of {" "}
-            <span className='text-purple'>
-                recent projects
-            </span>
-            </h1>
-            <div className="flex flex-wrap items-center justify-center p-4 gap-x-24 gap-y-8 mt-10"> 
+    <section className="section-shell" id="projects">
+      <p className="eyebrow text-center">Projects</p>
+      <h1 className="heading mt-3">
+        Selected <span className="text-purple">projects</span>
+      </h1>
+      <p className="section-copy text-center">
+        A focused selection of client-facing work that shows how I approach
+        credibility, responsiveness, and clear business communication on the web.
+      </p>
 
-            {projects.map(({id,title, des,img, iconLists, link}) => (
-                <div key = {id} className='sm:h-[41rem] h-[32rem] lg:min--h-[32.5rem] flex items-center justify-center sm:w-[570px] w-[80vw]'>
-                    <PinContainer title={link} href={link}>
-                        <div className='relative flex items-center justify-center sm:w-[570px] w-[80vw] overflow-hidden h-[30vh] sm:h-[40vh] mb-10'>
-                            <div className='relative overflow-hidden w-full h-full lg:rounded-3xl bg[#13162d'>
-                                <img src="/bg.png" alt="bg-img" />
-                            </div>
-                           <img src={img} alt={title}  className='z-10 absolute bottom-0'/>
+      <div className="mt-14 grid gap-8 lg:grid-cols-2">
+        {projects.map(({ id, title, des, role, result, img, iconLists, link }) => (
+          <article
+            key={id}
+            className="surface-card p-6 transition hover:border-white/20"
+          >
+            <div className="relative mb-8 flex h-[260px] items-center justify-center overflow-hidden rounded-[1.5rem] border border-white/10 bg-[#101827]">
+              <Image
+                src="/bg.png"
+                alt=""
+                fill
+                className="object-cover opacity-60"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+              <Image
+                src={img}
+                alt={title}
+                width={560}
+                height={320}
+                className="absolute bottom-0 z-10 h-auto w-full object-contain"
+              />
+            </div>
 
-                        </div>
-                        <h1 className='font-bold lg:text-xl text-base md:text-xl line-clamp-1'>
-                        {title}
+            <div className="space-y-5">
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.28em] text-sky-300">
+                  Featured work
+                </p>
+                <h2 className="mt-3 text-xl font-semibold md:text-2xl">{title}</h2>
+                <p className="mt-3 text-sm leading-7 text-white-100 lg:text-base">
+                  {des}
+                </p>
+              </div>
 
-                        </h1>
+              <div className="space-y-3 text-sm text-white-100">
+                <p className="rounded-xl border border-white/10 bg-black-200/40 px-4 py-3 leading-6">
+                  {role}
+                </p>
+                <p className="rounded-xl border border-white/10 bg-black-200/40 px-4 py-3 leading-6">
+                  {result}
+                </p>
+              </div>
 
-
-                        <p className='lg:text-xl lg:font-normal font-light text-sm line-clamp-2'>
-                            {des}
-                        </p>
-
-
-                        <div className="flex items-center justify-between mt-7 mb-3">
-                            <div className="flex items-center">
-                                {iconLists.map((icon,index) => (
-                                    <div key={icon} className='border border-white/[0.2 rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center' style={{transform:`translateX(-${5* index * 2}[px])`}}>
-                                        <img src={icon} alt={icon} className='p-2' />
-                                    </div>
-                                ))}
-                            </div>
-
-                            <div className='flex justify-center items-center'>
-                                <p className='flex lg:text-xl md:text-xs text-sm text-purple'>Check out live site</p>
-                                <FaLocationArrow className='ms-3' color='#CBACF9'/>
-                            </div>
-                        </div>
-                        </PinContainer>
-                    
+              <div className="flex items-center justify-between gap-4 pt-2">
+                <div className="flex items-center">
+                  {iconLists.map((icon, index) => (
+                    <div
+                      key={icon}
+                      className="flex h-9 w-9 items-center justify-center rounded-full border border-white/[0.2] bg-black lg:h-10 lg:w-10"
+                      style={{ transform: `translateX(${-8 * index}px)` }}
+                    >
+                      <Image
+                        src={icon}
+                        alt=""
+                        width={24}
+                        height={24}
+                        className="p-1.5 lg:p-2"
+                      />
+                    </div>
+                  ))}
                 </div>
-            ))}
-            </div>
-            </div>
-  )
-}
 
-export default Recentprojects
+                <a
+                  href={link}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center rounded-full bg-white px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-sky-300"
+                >
+                  Visit live site
+                  <FaLocationArrow className="ml-2" />
+                </a>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+  );
+};
+
+export default Recentprojects;

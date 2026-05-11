@@ -1,46 +1,59 @@
-
-import React from 'react'
-import Magicbutton from './ui/Magicbutton'
-import { FaLocationArrow } from 'react-icons/fa'
-import { socialMedia } from '@/data'
+import React from "react";
+import Image from "next/image";
+import { FaLocationArrow } from "react-icons/fa";
+import { socialMedia } from "@/data";
 
 const Footer = () => {
   return (
-    <footer className='w-full pb-10 mb[100px] md:mb-5' id='contact'>
-  
+    <footer className="w-full pb-10 md:mb-5" id="contact">
+      <div className="section-shell flex flex-col items-center">
+        <p className="eyebrow text-center">Contact</p>
+        <h1 className="heading mt-3 lg:max-w-[45vw]">
+          Let&apos;s build a <span className="text-purple">stronger</span>{" "}
+          digital presence.
+        </h1>
 
-        <div className="flex flex-col items-center">
-            <h1 className='heading lg:max-w-[45vw]'>
-                Ready to take <span className='text-purple'>your </span> digital presence to the next level?
-            </h1>
+        <p className="section-copy my-5 text-center md:mt-10">
+          If you need a frontend developer who cares about polish, clarity,
+          reliability, and smooth delivery, I&apos;d love to hear about the
+          project.
+        </p>
 
-            <p className='text-white-200 md:mt-10 my-5 text-center'>Reach out to me today and let&apos;s discuss how i can help you achieve your goals</p>
+        <a
+          href="mailto:mohammed.webdesign@gmail.com"
+          className="inline-flex h-12 items-center justify-center rounded-full bg-white px-6 text-sm font-semibold text-slate-950 transition hover:-translate-y-0.5 hover:bg-sky-300"
+        >
+          Email Mohammed
+          <FaLocationArrow className="ml-2" />
+        </a>
 
-            <a href="https://github.com/Nalphstein">
-                <Magicbutton
-                title="My Github"
-                icon={<FaLocationArrow />}
-                position='left' />
+        <div className="mt-16 flex w-full flex-col items-center justify-between gap-6 border-t border-white/10 pt-8 md:flex-row">
+        <p className="text-sm font-light text-white-100 md:text-base md:font-normal">
+          Copyright 2026 Mohammed
+        </p>
+        <div className="flex items-center gap-6 md:gap-3">
+          {socialMedia.map((profile) => (
+            <a
+              key={profile.id}
+              href={profile.link}
+              target="_blank"
+              rel="noreferrer"
+              aria-label={profile.name}
+              className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-lg border border-black-300 bg-black-200 bg-opacity-75 backdrop-blur-lg saturate-180 transition hover:-translate-y-0.5 hover:border-purple/60"
+            >
+              <Image
+                src={profile.img}
+                alt={profile.name}
+                width={20}
+                height={20}
+              />
             </a>
+          ))}
         </div>
-
-
-        <div className='flex mt-16 md:flex-row flex-col justify-between items-center'>
-            <p className='md:text-base text-sm md:font-normal font-light'>Copyright © 2024 Mohammed</p>
-        <div className='flex items-center md:gap-3 gap-6'>
-            {socialMedia.map((profile) => (
-                <div key={profile.id} className='w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300'>
-                    <img src={profile.img} alt={profile.img} width={20} height={20} />
-                </div>
-            ))}
-
-        </div>
-        </div>
-
-
-
+      </div>
+      </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

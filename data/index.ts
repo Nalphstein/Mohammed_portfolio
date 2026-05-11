@@ -1,26 +1,27 @@
 export const navitems = [
-  {name: "About", link: "#about" },
-  {name: "Projects", link: "#projects" },
-  {name: "Contact", link: "#contact" },
-]
+  { name: "About", link: "#about" },
+  { name: "Projects", link: "#projects" },
+  { name: "Experience", link: "#experience" },
+  { name: "Contact", link: "#contact" },
+];
 
 
 
 export const gridItems = [
     {
       id: 1,
-      title: "I prioritize client collaboration, fostering open communication ",
-      description: "",
+      title: "I build polished frontend experiences with the same reliability mindset I bring to production network support.",
+      description: "Positioning",
       className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
       imgClassName: "w-full h-full",
-      titleClassName: "justify-end",
+      titleClassName: "justify-end max-w-xl",
       img: "/b1.svg",
       spareImg: "",
     },
     {
       id: 2,
-      title: "I'm very flexible with time zone communications",
-      description: "",
+      title: "Nigeria-based, remote-friendly, and used to fast incident response, clear reporting, and cross-team communication.",
+      description: "How I work",
       className: "lg:col-span-2 md:col-span-3 md:row-span-2",
       imgClassName: "",
       titleClassName: "justify-start",
@@ -29,8 +30,8 @@ export const gridItems = [
     },
     {
       id: 3,
-      title: "My tech stack",
-      description: "I constantly try to improve",
+      title: "My stack is practical, modern, and built around frontend speed, maintainability, and clear user flows.",
+      description: "Tools I use often",
       className: "lg:col-span-2 md:col-span-3 md:row-span-2",
       imgClassName: "",
       titleClassName: "justify-center",
@@ -39,8 +40,8 @@ export const gridItems = [
     },
     {
       id: 4,
-      title: "Tech enthusiast with a passion for development.",
-      description: "",
+      title: "I care about trust signals: responsive layouts, clean interaction details, and interfaces that feel stable under pressure.",
+      description: "What clients feel",
       className: "lg:col-span-2 md:col-span-3 md:row-span-1",
       imgClassName: "",
       titleClassName: "justify-start",
@@ -50,8 +51,8 @@ export const gridItems = [
   
     {
       id: 5,
-      title: "Currenty working at an ISP company, as I generate reports to analyze network performance ",
-      description: "The Inside Scoop",
+      title: "My day job in ISP support sharpened how I think about uptime, diagnostics, monitoring, and dependable systems.",
+      description: "Current role",
       className: "md:col-span-3 md:row-span-2",
       imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
       titleClassName: "justify-center md:justify-start lg:justify-center",
@@ -60,80 +61,67 @@ export const gridItems = [
     },
     {
       id: 6,
-      title: "Do you want to start a project together?",
-      description: "",
+      title: "Need a frontend developer who can turn rough ideas into a polished, trustworthy launch-ready site?",
+      description: "Let&apos;s build something strong",
       className: "lg:col-span-2 md:col-span-3 md:row-span-1",
       imgClassName: "",
       titleClassName: "justify-center md:max-w-full max-w-60 text-center",
       img: "",
       spareImg: "",
-    },
+    }
   ];
 
 
 
-  export const projects = [
+export const projects = [
     {
       id: 1,
-      title: "A Business Development Grant",
-      des: "Explore different grants with our websites and get the best deals you could ever need",
-      img: "/ffg.png",
-      iconLists: ["/re.svg", "/tail.svg", "/ts.svg", ],
-      link: "https://smallbusinessdeveopmentgrants.com",
-      // "/three.svg", "/fm.svg"
-    },
-    {
-      id: 2,
       title: "ZegeMule Humanitarian Foundation ",
-      des: "This is a Humanitarianimplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.",
+      des: "A nonprofit website designed to communicate mission, build trust, and make the organization&apos;s community impact feel immediate and human.",
+      role: "Role: Frontend build, layout direction, and content presentation",
+      result: "Result: A clearer public-facing presence that better supports credibility and outreach.",
       img: "/23.png",
       iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
       link: "https://mulesite.onrender.com/",
     },
     {
-      id: 3,
-      title: "WNL Project",
-      des: "A Test project website for investing the future which was given to me by my company to pratice.",
-      img: "/122.png",
-      iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
-      link: "https://staging-wnl-project.onrender.com/",
+      id: 2,
+      title: "M. Aliyu Auto Engineering",
+      des: "A corporate workshop website built to present services clearly, support appointment actions, and make the business feel trustworthy from the first visit.",
+      role: "Role: Frontend development using React and Tailwind CSS",
+      result: "Result: A stronger digital presence with clearer service communication and a more professional customer-facing experience.",
+      img: "/mallisite-preview.svg",
+      iconLists: ["/re.svg", "/tail.svg", "/jsm-logo.png"],
+      link: "https://mallisite.vercel.app",
     },
-    // {
-    //   id: 4,
-    //   title: "Animated Apple Iphone 3D Website",
-    //   des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..",
-    //   img: "/p4.svg",
-    //   iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-    //   link: "/ui.apple.com",
-    // },
   ];
   
   export const workExperience = [
     {
       id: 1,
-      title: "Intern",
-      desc: "Assisted in the development of a web-based platform using React.js, enhancing interactivity.",
+      title: "Frontend Intern",
+      desc: "Supported the development of React interfaces, improved interaction quality, and learned how production teams structure and ship features.",
       className: "md:col-span-2",
       thumbnail: "/exp1.svg",
     },
     {
       id: 2,
       title: "Frontend Developer",
-      desc: "Designed and developed  websites for Hoolio devs using Angular.js, deploying the application on Verce",
-      className: "md:col-span-2", // change to md:col-span-2
+      desc: "Built responsive web applications with Angular, React, and Tailwind CSS, delivered 5+ client projects, and improved one landing page conversion rate by 18% through layout and mobile optimization.",
+      className: "md:col-span-2",
       thumbnail: "/exp4.svg",
     },
     {
       id: 3,
-      title: "Freelance web Dev Project",
-      desc: "Joined a team of developers to create a fully functional web application for a client, from initial concept to deployment.",
-      className: "md:col-span-2", // change to md:col-span-2
+      title: "Freelance Web Projects",
+      desc: "Integrated REST APIs, payments, and third-party services, then deployed production sites on Vercel and Netlify for dependable delivery and scalability.",
+      className: "md:col-span-2",
       thumbnail: "/exp3.svg",
     },
     {
       id: 4,
-      title: "Networking Officer",
-      desc: "Monitor network performance to detect issues, and, ensuring optimal service delivery technologies.",
+      title: "Network Engineer",
+      desc: "At Dotmac Technologies, I help maintain 99.9% service availability, resolve 50+ network incidents monthly, and contributed to reducing average downtime by 30% through monitoring, diagnostics, and infrastructure support.",
       className: "md:col-span-2",
       thumbnail: "/exp2.svg",
  
@@ -144,14 +132,14 @@ export const gridItems = [
   export const socialMedia = [
     {
       id: 1,
+      name: "GitHub",
       img: "/git.svg",
+      link: "https://github.com/Nalphstein",
     },
     {
       id: 2,
-      img: "/twit.svg",
-    },
-    {
-      id: 3,
+      name: "LinkedIn",
       img: "/link.svg",
+      link: "https://www.linkedin.com/in/mohammed-mohammed-7a406b154",
     },
   ];

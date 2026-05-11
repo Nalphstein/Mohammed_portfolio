@@ -1,62 +1,125 @@
-import React from "react"
-import { Spotlight } from "./ui/Sportlights"
-import { TextGenerateEffect } from "./ui/text-generate-effect"
-import Magicbutton from "./ui/Magicbutton"
-import { FaLocationArrow } from "react-icons/fa"
+import React from "react";
+import Link from "next/link";
+import { FaLocationArrow } from "react-icons/fa";
+import { IoCopyOutline } from "react-icons/io5";
+import { Spotlight } from "./ui/Sportlights";
 
 const Hero = () => {
-    return (
-        <div className="pb-20 pt-36">
-            <div>
-                <Spotlight
-                    className="-top-40 -left-10 md:-left-32 md:top h-screen"
-                    fill="white"
-                />
-                <Spotlight
-                    className="top-10 -left-full h=[8o-vh] w-[50vw]"
-                    fill="purple"
-                />
-                <Spotlight
-                    className="top-28 left-80 h-[80vh] w=[50vw]"
-                    fill="blue"
-                />
+  return (
+    <section className="section-shell relative overflow-hidden pt-24 md:pt-28">
+      <div>
+        <Spotlight
+          className="-top-40 -left-10 h-screen opacity-60 md:-left-32 md:top-0"
+          fill="white"
+        />
+        <Spotlight
+          className="top-10 -left-full h-[80vh] w-[50vw] opacity-70"
+          fill="purple"
+        />
+        <Spotlight
+          className="left-80 top-28 h-[80vh] w-[50vw] opacity-65"
+          fill="blue"
+        />
+      </div>
+
+      <div className="absolute inset-0 bg-grid-white/[0.04]">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(14,165,233,0.16),transparent_24%),radial-gradient(circle_at_bottom_right,rgba(34,197,94,0.12),transparent_22%)]" />
+      </div>
+
+      <div className="relative z-10 grid gap-10 lg:grid-cols-[1.3fr_0.9fr] lg:items-end">
+        <div className="space-y-8">
+          <div className="space-y-5">
+            <p className="eyebrow">Frontend Developer | Abuja, Nigeria</p>
+            <h1 className="max-w-4xl text-5xl font-semibold leading-[0.95] tracking-tight text-white md:text-6xl lg:text-7xl">
+              Dependable frontend experiences for businesses that need clarity,
+              trust, and strong execution.
+            </h1>
+            <p className="max-w-2xl text-base leading-8 text-white-100 md:text-lg">
+              I&apos;m Mohammed, a frontend developer with a network engineering
+              backbone. I build polished digital experiences for companies,
+              nonprofits, and service businesses while bringing an SLA-aware,
+              reliability-first mindset to every product decision.
+            </p>
+          </div>
+
+          <div className="flex flex-col gap-4 sm:flex-row">
+            <Link
+              href="#projects"
+              className="inline-flex h-12 items-center justify-center rounded-full bg-white px-6 text-sm font-semibold text-slate-950 transition hover:-translate-y-0.5 hover:bg-sky-300"
+            >
+              View selected work
+              <FaLocationArrow className="ml-2" />
+            </Link>
+            <a
+              href="mailto:mohammed.webdesign@gmail.com"
+              className="inline-flex h-12 items-center justify-center rounded-full border border-white/15 bg-white/5 px-6 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:border-sky-300/50 hover:bg-white/10"
+            >
+              Start a conversation
+              <IoCopyOutline className="ml-2" />
+            </a>
+          </div>
+
+          <div className="grid gap-4 md:grid-cols-3">
+            <div className="metric-card">
+              <p className="text-3xl font-semibold text-white">99.9%</p>
+              <p className="mt-2 text-sm leading-6 text-white-100">
+                service availability maintained in ISP support.
+              </p>
             </div>
-
-            <div className="h-screen w-full dark:bg-black-100 bg-white  dark:bg-grid-white/[0.05] bg-grid-black/[0.2] flex items-center justify-center absolute top-0 left-0">
-                {/* Radial gradient for the container to give a faded look */}
-                <div className="absolute pointer-events-none inset-0 flex items-center justify-center 
-                dark:bg-black-100 bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
+            <div className="metric-card">
+              <p className="text-3xl font-semibold text-white">50+</p>
+              <p className="mt-2 text-sm leading-6 text-white-100">
+                network incidents handled monthly with structured reporting.
+              </p>
             </div>
-
-            <div className="flex justify-center relative my-20 z-10">
-                <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
-                    <h2 className="uppercase tracking-widest text-xs text-blue-100 text-center max-w-80">
-                    I create dynamic websites.
-                    </h2>
-
-                    <TextGenerateEffect
-                    className=" text-center text-[40px] md:text-5xl lg:text-6xl"
-                    words="Transforming Concepts into Seamless User Experiences"/>
-
-
-                    <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
-                        Hi, I&apos;m Mohammed, a Frontend Web Developer based in Nigeria
-
-                    </p>
-
-                    <a href="#about">
-                        <Magicbutton
-                        title= "Show my work"
-                        icon= {<FaLocationArrow/>}
-                        position="right"
-                        />
-
-                    </a>
-                </div>
-
+            <div className="metric-card">
+              <p className="text-3xl font-semibold text-white">5+</p>
+              <p className="mt-2 text-sm leading-6 text-white-100">
+                client websites delivered across business and nonprofit use cases.
+              </p>
             </div>
+          </div>
         </div>
-    )
-}
 
-export default Hero
+        <div className="surface-card relative overflow-hidden p-6">
+          <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(14,165,233,0.08),transparent_45%)]" />
+          <div className="relative space-y-6">
+            <div>
+              <p className="eyebrow">What I Bring</p>
+              <h2 className="mt-3 text-2xl font-semibold text-white">
+                Corporate reliability with a creative frontend eye.
+              </h2>
+            </div>
+
+            <div className="space-y-3">
+              {[
+                "Responsive frontend systems built with React and Tailwind CSS",
+                "Infrastructure-aware problem solving shaped by enterprise support",
+                "Calm execution, clear communication, and conversion-minded layouts",
+              ].map((item) => (
+                <div
+                  key={item}
+                  className="rounded-2xl border border-white/10 bg-black-200/40 px-4 py-4 text-sm leading-6 text-white-100"
+                >
+                  {item}
+                </div>
+              ))}
+            </div>
+
+            <div className="rounded-2xl border border-white/10 bg-[#0b1220] p-5">
+              <p className="text-sm uppercase tracking-[0.3em] text-sky-300">
+                Current Focus
+              </p>
+              <p className="mt-3 text-sm leading-7 text-white-100">
+                Open to frontend roles and freelance web work where clarity,
+                trust, and execution quality matter as much as visual polish.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Hero;

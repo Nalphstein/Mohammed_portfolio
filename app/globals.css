@@ -70,8 +70,15 @@
   * {
     @apply border-border !scroll-smooth;
   }
+  html {
+    @apply bg-black-100;
+  }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-black-100 text-foreground;
+    background-image:
+      radial-gradient(circle at top, rgba(59, 130, 246, 0.14), transparent 30%),
+      linear-gradient(180deg, #020617 0%, #08111f 45%, #020617 100%);
+    font-family: var(--font-geist-sans), Arial, sans-serif;
   }
   button {
     @apply active:outline-none;
@@ -80,7 +87,27 @@
 
 @layer utilities {
   .heading {
-    @apply font-bold text-4xl md:text-5xl text-center;
+    @apply text-center text-4xl font-semibold tracking-tight md:text-5xl;
+  }
+
+  .section-shell {
+    @apply px-2 py-12 md:px-4;
+  }
+
+  .section-copy {
+    @apply mx-auto mt-4 max-w-3xl text-base leading-7 text-white-100;
+  }
+
+  .eyebrow {
+    @apply text-xs font-semibold uppercase tracking-[0.35em] text-sky-300;
+  }
+
+  .surface-card {
+    @apply rounded-[1.5rem] border border-white/10 bg-white/[0.03] shadow-[0_10px_40px_rgba(2,6,23,0.22)];
+  }
+
+  .metric-card {
+    @apply rounded-[1.25rem] border border-white/10 bg-[#0f172a]/80 p-5;
   }
 }
 
