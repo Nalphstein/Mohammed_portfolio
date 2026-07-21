@@ -3,6 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
+import { ThemeToggle } from "./ThemeToggle";
 
 export const FloatingNav = ({
   navItems,
@@ -21,7 +22,7 @@ export const FloatingNav = ({
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.35, ease: "easeOut" }}
       className={cn(
-        "fixed inset-x-0 top-6 z-[5000] mx-auto flex max-w-fit items-center justify-center space-x-2 rounded-full border border-white/10 bg-[#09111e]/85 px-4 py-3 shadow-[0_18px_50px_rgba(2,6,23,0.35)] backdrop-blur-md",
+        "fixed inset-x-0 top-6 z-[5000] mx-auto flex max-w-fit items-center justify-center gap-1 rounded-full border border-border bg-card/85 px-4 py-3 shadow-[0_18px_50px_rgba(2,6,23,0.12)] backdrop-blur-md dark:shadow-[0_18px_50px_rgba(2,6,23,0.35)]",
         className
       )}
     >
@@ -30,13 +31,14 @@ export const FloatingNav = ({
           key={`link=${idx}`}
           href={navItem.link}
           className={cn(
-            "relative flex items-center rounded-full px-4 py-2 text-sm font-medium text-white-100 transition hover:bg-white/10 hover:text-white"
+            "relative flex items-center rounded-full px-4 py-2 text-sm font-medium text-muted-foreground transition hover:bg-muted hover:text-foreground"
           )}
         >
           <span className="block sm:hidden">{navItem.icon}</span>
           <span className="!cursor-pointer">{navItem.name}</span>
         </Link>
       ))}
+      <ThemeToggle />
     </motion.div>
   );
 };

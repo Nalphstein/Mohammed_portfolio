@@ -8,7 +8,7 @@ const Recentprojects = () => {
     <section className="section-shell" id="projects">
       <p className="eyebrow text-center">Projects</p>
       <h1 className="heading mt-3">
-        Selected <span className="text-purple">projects</span>
+        Selected <span className="text-highlight">projects</span>
       </h1>
       <p className="section-copy text-center">
         A focused selection of client-facing work that shows how I approach
@@ -19,9 +19,9 @@ const Recentprojects = () => {
         {projects.map(({ id, title, des, role, result, img, iconLists, link }) => (
           <article
             key={id}
-            className="surface-card p-6 transition hover:border-white/20"
+            className="surface-card p-6 transition hover:border-accent/40"
           >
-            <div className="relative mb-8 flex h-[260px] items-center justify-center overflow-hidden rounded-[1.5rem] border border-white/10 bg-[#101827]">
+            <div className="relative mb-8 flex h-[260px] items-center justify-center overflow-hidden rounded-[1.5rem] border border-border bg-muted">
               <Image
                 src="/bg.png"
                 alt=""
@@ -40,20 +40,20 @@ const Recentprojects = () => {
 
             <div className="space-y-5">
               <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.28em] text-sky-300">
+                <p className="text-xs font-semibold uppercase tracking-[0.28em] text-accent">
                   Featured work
                 </p>
                 <h2 className="mt-3 text-xl font-semibold md:text-2xl">{title}</h2>
-                <p className="mt-3 text-sm leading-7 text-white-100 lg:text-base">
+                <p className="mt-3 text-sm leading-7 text-muted-foreground lg:text-base">
                   {des}
                 </p>
               </div>
 
-              <div className="space-y-3 text-sm text-white-100">
-                <p className="rounded-xl border border-white/10 bg-black-200/40 px-4 py-3 leading-6">
+              <div className="space-y-3 text-sm text-muted-foreground">
+                <p className="rounded-xl border border-border bg-muted/60 px-4 py-3 leading-6">
                   {role}
                 </p>
-                <p className="rounded-xl border border-white/10 bg-black-200/40 px-4 py-3 leading-6">
+                <p className="rounded-xl border border-border bg-muted/60 px-4 py-3 leading-6">
                   {result}
                 </p>
               </div>
@@ -63,7 +63,7 @@ const Recentprojects = () => {
                   {iconLists.map((icon, index) => (
                     <div
                       key={icon}
-                      className="flex h-9 w-9 items-center justify-center rounded-full border border-white/[0.2] bg-black lg:h-10 lg:w-10"
+                      className="flex h-9 w-9 items-center justify-center rounded-full border border-border bg-background lg:h-10 lg:w-10"
                       style={{ transform: `translateX(${-8 * index}px)` }}
                     >
                       <Image
@@ -81,7 +81,7 @@ const Recentprojects = () => {
                   href={link}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center rounded-full bg-white px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-sky-300"
+                  className="inline-flex items-center rounded-full bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground transition hover:opacity-90"
                 >
                   Visit live site
                   <FaLocationArrow className="ml-2" />

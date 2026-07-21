@@ -3,8 +3,9 @@
 @tailwind utilities;
 
 @layer base {
+  /* Light — "Trust & Authority": monochrome + blue accent */
   :root {
-    --background: 0 0% 100%;
+    --background: 0 0% 98%;
     --foreground: 240 10% 3.9%;
 
     --card: 0 0% 100%;
@@ -16,53 +17,58 @@
     --primary: 240 5.9% 10%;
     --primary-foreground: 0 0% 98%;
 
-    --secondary: 240 4.8% 95.9%;
-    --secondary-foreground: 240 5.9% 10%;
+    --secondary: 240 5% 26%;
+    --secondary-foreground: 0 0% 98%;
 
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 46.1%;
+    --muted: 210 20% 93%;
+    --muted-foreground: 215 14% 40%;
 
-    --accent: 240 4.8% 95.9%;
-    --accent-foreground: 240 5.9% 10%;
+    --accent: 224 76% 48%;
+    --accent-foreground: 0 0% 100%;
+
+    --highlight: 262 51% 47%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
     --border: 240 5.9% 90%;
     --input: 240 5.9% 90%;
-    --ring: 240 10% 3.9%;
+    --ring: 224 76% 48%;
 
     --radius: 0.5rem;
   }
 
+  /* Dark — current tech/navy theme, now tokenized */
   .dark {
-    --background: 240 10% 3.9%;
-    --foreground: 0 0% 98%;
+    --background: 222 47% 4%;
+    --foreground: 210 40% 98%;
 
-    --card: 240 10% 3.9%;
-    --card-foreground: 0 0% 98%;
+    --card: 222 45% 8%;
+    --card-foreground: 210 40% 98%;
 
-    --popover: 240 10% 3.9%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 222 45% 8%;
+    --popover-foreground: 210 40% 98%;
 
-    --primary: 0 0% 98%;
-    --primary-foreground: 240 5.9% 10%;
+    --primary: 0 0% 100%;
+    --primary-foreground: 222 47% 4%;
 
-    --secondary: 240 3.7% 15.9%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary: 217 19% 15%;
+    --secondary-foreground: 210 40% 98%;
 
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
+    --muted: 217 33% 12%;
+    --muted-foreground: 233 33% 82%;
 
-    --accent: 240 3.7% 15.9%;
-    --accent-foreground: 0 0% 98%;
+    --accent: 199 95% 74%;
+    --accent-foreground: 222 47% 4%;
+
+    --highlight: 263 89% 82%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 240 4.9% 83.9%;
+    --border: 217 30% 20%;
+    --input: 217 30% 20%;
+    --ring: 199 95% 74%;
   }
 }
 
@@ -71,23 +77,29 @@
     @apply border-border !scroll-smooth;
   }
   html {
-    @apply bg-black-100;
+    @apply bg-background;
   }
   body {
-    @apply bg-black-100 text-foreground;
+    @apply bg-background text-foreground transition-colors duration-300;
+    font-family: var(--font-geist-sans), Arial, sans-serif;
+  }
+  .dark body {
     background-image:
       radial-gradient(circle at top, rgba(59, 130, 246, 0.14), transparent 30%),
       linear-gradient(180deg, #020617 0%, #08111f 45%, #020617 100%);
-    font-family: var(--font-geist-sans), Arial, sans-serif;
   }
   button {
     @apply active:outline-none;
+  }
+  a,
+  button {
+    @apply outline-none transition-shadow duration-150 focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background;
   }
 }
 
 @layer utilities {
   .heading {
-    @apply text-center text-4xl font-semibold tracking-tight md:text-5xl;
+    @apply text-center text-4xl font-semibold tracking-tight text-foreground md:text-5xl;
   }
 
   .section-shell {
@@ -95,19 +107,26 @@
   }
 
   .section-copy {
-    @apply mx-auto mt-4 max-w-3xl text-base leading-7 text-white-100;
+    @apply mx-auto mt-4 max-w-3xl text-base leading-7 text-muted-foreground;
   }
 
   .eyebrow {
-    @apply text-xs font-semibold uppercase tracking-[0.35em] text-sky-300;
+    @apply text-xs font-semibold uppercase tracking-[0.35em] text-accent;
+  }
+
+  .text-highlight {
+    background-image: linear-gradient(90deg, hsl(var(--accent)), hsl(var(--highlight)));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
   }
 
   .surface-card {
-    @apply rounded-[1.5rem] border border-white/10 bg-white/[0.03] shadow-[0_10px_40px_rgba(2,6,23,0.22)];
+    @apply rounded-[1.5rem] border border-border bg-card shadow-[0_10px_30px_rgba(15,23,42,0.06)] dark:bg-white/[0.03] dark:shadow-[0_10px_40px_rgba(2,6,23,0.22)];
   }
 
   .metric-card {
-    @apply rounded-[1.25rem] border border-white/10 bg-[#0f172a]/80 p-5;
+    @apply rounded-[1.25rem] border border-border bg-muted/60 p-5 dark:bg-[#0f172a]/80;
   }
 }
 

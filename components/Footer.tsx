@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="section-shell flex flex-col items-center">
         <p className="eyebrow text-center">Contact</p>
         <h1 className="heading mt-3 lg:max-w-[45vw]">
-          Let&apos;s build a <span className="text-purple">stronger</span>{" "}
+          Let&apos;s build a <span className="text-highlight">stronger</span>{" "}
           digital presence.
         </h1>
 
@@ -21,14 +21,14 @@ const Footer = () => {
 
         <a
           href="mailto:mohammed.webdesign@gmail.com"
-          className="inline-flex h-12 items-center justify-center rounded-full bg-white px-6 text-sm font-semibold text-slate-950 transition hover:-translate-y-0.5 hover:bg-sky-300"
+          className="inline-flex h-12 items-center justify-center rounded-full bg-primary px-6 text-sm font-semibold text-primary-foreground transition hover:-translate-y-0.5 hover:opacity-90"
         >
           Email Mohammed
           <FaLocationArrow className="ml-2" />
         </a>
 
-        <div className="mt-16 flex w-full flex-col items-center justify-between gap-6 border-t border-white/10 pt-8 md:flex-row">
-        <p className="text-sm font-light text-white-100 md:text-base md:font-normal">
+        <div className="mt-16 flex w-full flex-col items-center justify-between gap-6 border-t border-border pt-8 md:flex-row">
+        <p className="text-sm font-light text-muted-foreground md:text-base md:font-normal">
           Copyright 2026 Mohammed
         </p>
         <div className="flex items-center gap-6 md:gap-3">
@@ -39,7 +39,7 @@ const Footer = () => {
               target="_blank"
               rel="noreferrer"
               aria-label={profile.name}
-              className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-lg border border-black-300 bg-black-200 bg-opacity-75 backdrop-blur-lg saturate-180 transition hover:-translate-y-0.5 hover:border-purple/60"
+              className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-lg border border-border bg-muted backdrop-blur-lg saturate-180 transition hover:-translate-y-0.5 hover:border-accent/60"
             >
               <Image
                 src={profile.img}
